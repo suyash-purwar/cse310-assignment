@@ -4,12 +4,10 @@ import java.util.*;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import errors.InvalidOptionException;
-// import errors.DuplicateIdException;
+import errors.*;
 
 public class Validator {
   private static String DB_PATH = "/media/suyash/HDD/Programming/Java/assignment/db/db.csv";
-  private static char[] read_buffer = new char[1000];
 
   public static boolean doesIdExist(int num) {
     try {
@@ -58,7 +56,7 @@ public class Validator {
 
   public static boolean isCarAlreadyBooked(int id) throws IOException {
     String line;
-    BufferedReader db_r = new BufferedReader(new FileReader("/media/suyash/HDD/Programming/Java/assignment/db/db.csv"));
+    BufferedReader db_r = new BufferedReader(new FileReader(DB_PATH));
     db_r.readLine();
     boolean isBooked = false;
     while ((line = db_r.readLine()) != null) {

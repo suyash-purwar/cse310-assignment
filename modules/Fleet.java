@@ -6,13 +6,11 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.FileNotFoundException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Fleet {
   private static String DB_PATH = "/media/suyash/HDD/Programming/Java/assignment/db/db.csv";
-  private static char[] read_buffer = new char[1000];
 
   public static void addNewCar(int id, String model, String color) {
     try {

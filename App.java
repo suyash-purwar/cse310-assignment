@@ -1,5 +1,5 @@
 import java.util.*;
-import utils.Validator;
+import utils.*;
 import errors.*;
 import modules.*;
 
