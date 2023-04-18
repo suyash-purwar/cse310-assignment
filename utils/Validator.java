@@ -56,23 +56,18 @@ public class Validator {
     }
   }
 
-  public static boolean isCarAlreadyBooked(int id) {
-    try {
-      String line;
-      BufferedReader db_r = new BufferedReader(new FileReader("/media/suyash/HDD/Programming/Java/assignment/db/db.csv"));
-      db_r.readLine();
-      boolean isBooked = false;
-      while ((line = db_r.readLine()) != null) {
-        if (id == Integer.parseInt(line.charAt(0)+"")) {
-          if (line.split(", ")[3].equals("true")) {
-            isBooked = true;
-          }
+  public static boolean isCarAlreadyBooked(int id) throws IOException {
+    String line;
+    BufferedReader db_r = new BufferedReader(new FileReader("/media/suyash/HDD/Programming/Java/assignment/db/db.csv"));
+    db_r.readLine();
+    boolean isBooked = false;
+    while ((line = db_r.readLine()) != null) {
+      if (id == Integer.parseInt(line.charAt(0)+"")) {
+        if (line.split(", ")[3].equals("true")) {
+          isBooked = true;
         }
       }
-      return isBooked;
-    } catch (IOException e) {
-      System.out.println(e);
-      return false;
     }
+    return isBooked;
   }
 }

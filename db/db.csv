@@ -3,3 +3,5 @@ Id, Model, Color, IsBooked, BookedBy, BookedOn, ReturnDate
 2, Kwid, Black, true, suyash, 15/04/2023, 1/2/2023
 3, Nova, White, true, manthan, 15/04/2023, 20/04/2023
 4, Nano, Yellow, false, null, null, null
+5, Laborghini, Grey, false, null, null, null
+6, Thar, Black, true, Suyash, 18/04/2023, 30/5/2023
